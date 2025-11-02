@@ -77,7 +77,7 @@ jobs:
     needs: get_devices
     runs-on: ubuntu-22.04
     container:
-      image: ghcr.io/${{ needs.get_devices.outputs.repo_owner }}/openwrt-build:latest
+      # image: ghcr.io/${{ needs.get_devices.outputs.repo_owner }}/openwrt-build:latest
       options: --mount type=bind,source=/mnt,target=/mnt --user runner:docker
     strategy:
       fail-fast: false
